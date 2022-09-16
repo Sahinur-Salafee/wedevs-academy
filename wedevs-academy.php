@@ -43,6 +43,9 @@
    {
       $this-> define_constents();
 
+      /**
+       * Activation Hook
+       */
       register_activation_hook(__FILE__, [$this, 'activate']);
    }
    
@@ -68,7 +71,7 @@
     *
     * @return void
     */
-    
+
    public function define_constents() {
       define('WD_ACADEMY_VERSION', self::VERSION);
       define('WD_ACADEMY_FILE', __FILE__);
