@@ -19,7 +19,7 @@
     exit;
  }
 
- include_once __DIR__ . '/vendor/autoload.php';
+ include_once __DIR__ . '/vendor/autoload.php'; 
 
  
 /**
@@ -77,6 +77,11 @@
     */
    public function init_plugin() {
 
+      if(is_admin()) {
+         new Wedevs\Academy\Admin();
+      } else {
+         new Wedevs\Academy\Frontend();
+      }
    }
 
    /**
