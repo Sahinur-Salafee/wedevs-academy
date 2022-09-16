@@ -1,0 +1,19 @@
+{
+  "name": "salafee/wedevs-academy",
+  "description": "A plugin for Wedevs Academy",
+  "type": "wordpress-plugin",
+  "license": "GPLv2",
+  "autoload": {
+    "psr-4": {
+      "Wedevs\\Academy\\": "includes/"
+    },
+    "files": []
+  },
+  "authors": [
+    {
+      "name": "salafee"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
