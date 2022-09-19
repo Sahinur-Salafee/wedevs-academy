@@ -8,9 +8,9 @@ namespace Wedevs\Academy\Admin;
 
 class Addressbook {
 
-    function __construct()
+    public function Addressbook()
     {
-        
+        echo 'Hello From Addressbook';
     }
 
 }

@@ -23,7 +23,8 @@ class Menu {
     }
     
     public function address_book_page() {
-        echo 'Address Book Page';
+        $addressbook = new Addressbook();
+        $addressbook -> Addressbook();
     }
     
     public function settings_page() {
