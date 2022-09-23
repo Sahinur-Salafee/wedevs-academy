@@ -28,6 +28,6 @@ class Menu {
     }
     
     public function settings_page() {
-        echo 'Address Book Settings';
+        echo 'Address Book Settings Page';
     }
 }
