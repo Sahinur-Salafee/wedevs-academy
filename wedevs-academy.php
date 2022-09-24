@@ -105,12 +105,8 @@
     */
 
    public function activate() {
-      $installed = get_option('wp_academy_installed');
-      if( ! $installed) {
-         update_option('wp_academy_installed', time());
-      }
-      
-      update_option('wp_academy_version', WD_ACADEMY_VERSION);
+      $installer = new Wedevs\Academy\Installer();
+      $installer -> run();
    }
  }
 
