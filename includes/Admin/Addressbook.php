@@ -31,6 +31,32 @@ class Addressbook {
         if( file_exists($template)) {
             include $template;
         }
+
+    }
+
+    /**
+     * Form Handler Function
+     *
+     * @return void
+     */
+    public function form_handler()
+    {
+        if(! isset($_POST['submit_address'])) {
+            return;
+        }
+
+        // Validate the nonce
+        if( ! wp_verify_nonce( $_POST['_wpnonce'], 'add_address')) {
+            wp_die('Are you cheating?');
+        }
+
+        // Check the validate current user
+        if( ! current_user_can('manage_options')) {
+            wp_die('Are you cheating?');
+        }
+
+        var_dump($_POST);
+        exit;
     }
 
 }

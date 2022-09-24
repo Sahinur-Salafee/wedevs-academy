@@ -12,8 +12,16 @@ namespace Wedevs\Academy;
     {
 
         /**
-       * Initialize Menu Class
-       */
+        * Initialize Menu Class
+        */
         new Admin\Menu();
+        $this -> action_handler();
+    }
+
+    public function action_handler()
+    {
+        $addressbook = new Admin\Addressbook();
+
+        add_action('admin_init',[$addressbook , 'form_handler']);
     }
  }
